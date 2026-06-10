@@ -22,20 +22,27 @@ int main() {
   float AreaA01 = 10791.54;
   float AreaB01 = 282;
 
-  double PibA01 = 1100000000;
-  double PibB01 = 58000000;
+  float PibA01 = 110000000.00;
+  float PibB01 = 58000000.00;
 
   int TurismoA01 = 16;
   int TurismoB01 = 12;
   
   char confirmacao[10];
 
+  float Densidade1, Densidade2;
+  float PibC1, PibC2;
 
 
   // Área para entrada de dados
   printf("Digite S para mostrar as cartas: ");
   scanf("%s", &confirmacao);
   //Confirmação apenas "estetica", visto que não temos ainda estrutura de decisão no codigo. Serve apenas para iniciar o programa
+
+  Densidade1 = (PopulacaoA01/AreaA01);
+  Densidade2 = (PopulacaoB01/AreaB01);
+  PibC1 = (PibA01/PopulacaoA01);
+  PibC2 = (PibB01/PopulacaoB01);
 
 
   // Área para exibição dos dados da cidade
@@ -44,19 +51,23 @@ int main() {
   printf("Codigo: %s\n", CodigoCartaA1);
   printf("Estado: %s\n", EstadoA);
   printf("Cidade: %s\n", NomeCidadeA01);
-  printf("Populacao: %d\n", PopulacaoA01);
-  printf("Area em Km2: %.2f\n", AreaA01);
-  printf("PIB: %.2f\n", PibA01);
-  printf("Pontos Turisticos: %d\n\n", TurismoA01);
+  printf("Populacao: %d habitantes\n", PopulacaoA01);
+  printf("Area em Km2: %.2f Km²\n", AreaA01);
+  printf("PIB: %.2f bilhoes de reais\n", PibA01);
+  printf("Pontos Turisticos: %d\n", TurismoA01);
+  printf("Densidade Populacional: %.2f hab/km²\n", Densidade1);
+  printf("PIB per Capita: %.2f reais\n\n", PibC1);
 
   printf("Codigo: %s\n", CodigoCartaB1);
   printf("Estado: %s\n", EstadoB);
   printf("Cidade: %s\n", NomeCidadeB01);
-  printf("Populacao: %d\n", PopulacaoB01);
-  printf("Area em Km2: %.2f\n", AreaB01);
-  printf("PIB: %.2f\n", PibB01);
+  printf("Populacao: %d habitantes\n", PopulacaoB01);
+  printf("Area em Km2: %.2f Km²\n", AreaB01);
+  printf("PIB: %.2f milhoes de reais\n", PibB01);
   printf("Pontos Turisticos: %d\n", TurismoB01);
-
+  printf("Densidade Populacional: %.2f hab/km²\n", Densidade2);
+  printf("PIB per Capita: %.2f reais\n\n", PibC2);
 
   return 0;
 } 
+
